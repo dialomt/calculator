@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.main,
+button {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* vamos a centrar la calculadora */
+.main {
+    display: flex;
+    align-items: center;
+    /*hay que definir la altura*/
+    justify-content: center;
+    height: 100vh;
+    /*esta es la altura*/
+}
+
+.calculadora {
+    background-color: grey;
+    padding: 20px;
+    border: 1px solid rgba(233, 25, 59, 0.926);
+    border-radius: 15px;
+    display: grid; /*vertical y creamos 4 columnas*/
+    grid-template-columns: repeat(4, 1fr); /*ocupa todo el ancho disponible. vs auto*/
+    grid-gap: 10px; /*la separacion entre elementos*/
+    max-width: 300px; /*ancho maximo*/
+}
+
+
+.calculadora__result, .calculadora__button {
+    background-color: white; /*relleno botones*/
+    color: blue; /*texto*/
+    border: 1px solid black;
+    padding: 10px 15px; /*margen interno. 10 a cada lado y 15 arriba y abajo*/
+    font-size: 1.2rem; /*rem=unidades relativas, 1 rem es la fuente por defento del navegador,2rem es la fuente de nuestro navegador * 2 */
+    text-align: center; /*que el texto este centrado en el recuadro*/
+    border-radius: 50px;
+
+}
+
+.calculadora__result { /*es el cero de label*/
+    grid-column: 1 / span 4; /*ocupa toda la primera fila, las 4 columnas*/
+    text-align: end; /*que salga a la derecha como en las calculadoras*/
+    background-color: aquamarine;
+
+}
+
+.calculadora__button { /*efecto de los botones*/
+    cursor: pointer; /*se ponga la mano de seleccion cuando paso por encima*/
+    
+}
+
+.calculadora__button:hover {
+    background-color: coral;
+}
+
